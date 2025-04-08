@@ -1,7 +1,7 @@
 /* Global settings */
 :root {
-    --siw-blue: #1e3f6d;
-    --siw-yellow: #f6c94c;
+    --siw-blue: #22406C; /*#1e3f6d*/
+    --siw-yellow: #FFEC1C; /*#f5c84c*//*#f6c94c*/
 }
 
 * {
@@ -17,27 +17,28 @@ body {
     flex-direction: column;
 }
 
+/* Navigation */
 nav {
     position: sticky;
     top: 0;
-    background-color: #003366;
+    background-color: var(--siw-blue); /*#003366*/
     color: white;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000; /* Ensures nav is above other content */
 }
 
-nav img {
+nav #logo {
     height: 6rem;
     width: auto;
 }
 
 .nav-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0.5rem 1rem;
+    gap: 5rem;
 }
 
 #nav-menu {
@@ -50,10 +51,24 @@ nav img {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    display:inline-block;
+    border-radius: 0.3rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#nav-menu li a:hover {
+    background-color: var(--siw-yellow); /* lichtgeel */
+    color: var(--siw-blue); /* donkerblauw */
 }
 
 #nav-menu li a.active {
-    border-bottom: 2px solid white;
+    color: var(--siw-yellow);
+}
+
+#nav-menu li a.active:hover {
+    color: var(--siw-blue);
 }
 
 /* Hamburger */
@@ -75,7 +90,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--siw-yellow);
     text-shadow: 1px 1px 2px black;
 }
 
@@ -101,7 +116,37 @@ footer {
 
 
 /* Responsive */
+@media (max-width: 1200px) {
+    .nav-container {
+        gap: 2rem;
+    }
+
+    #nav-menu {
+        gap: 1rem;
+    }
+
+    #nav-menu li a {
+        padding: 0.5rem 0.5rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .nav-container {
+        gap: 1rem;
+    }
+
+    #nav-menu li a {
+        font-size: 1rem;
+        padding: 0.3rem 0.3rem;
+    }
+}
+
 @media (max-width: 768px) {
+    .nav-container{
+        justify-content: space-between;
+        gap: 0;
+    }
+
     #nav-menu {
         flex-direction: column;
         display: none;
