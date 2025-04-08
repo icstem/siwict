@@ -29,6 +29,11 @@ nav {
 nav #logo {
     height: 6rem;
     width: auto;
+    transition: all 0.3s ease;
+}
+
+nav #logo.scrolled {
+    height: 3rem;
 }
 
 .nav-container {
@@ -102,9 +107,12 @@ header h1 {
 /* Main */
 main {
     flex: 1;
-    padding: 2rem;
-}
-
+    max-width: 90ch;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    line-height: 1.6;
+  }
+ 
 /* Footer */
 footer {
     background-color: #003366;
