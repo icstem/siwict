@@ -107,11 +107,47 @@ header h1 {
 /* Main */
 main {
     flex: 1;
-    max-width: 90ch;
+    /* max-width: 90ch; */
     margin: 2rem auto;
     padding: 0 1rem;
+}
+
+main section {
+    margin-bottom: 3rem;
+    max-width: 90ch;
+}
+
+main h1,
+main h2 {
+    margin-bottom: 0.7rem;
+}
+
+main p {
     line-height: 1.6;
-  }
+    text-align: justify;
+}
+
+main img {
+    width: 100%;
+    max-width: 90ch;
+    height: auto;
+    display: block;
+    margin-bottom: 1rem;
+    margin: 1.5rem auto;
+    border-radius: 0.75rem;
+}
+  
+/* lists */
+main ul {
+    padding-left: 4rem;
+    list-style-type: disc;
+    margin-top: 0.5rem;
+    line-height: 1.6;
+}
+  
+main li {
+    margin-bottom: 0.3rem;
+}
  
 /* Footer */
 footer {
