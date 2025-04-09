@@ -122,6 +122,14 @@ main h2 {
     margin-bottom: 0.7rem;
 }
 
+main h1 {
+    font-size: 1.8rem;
+}
+
+main h2 {
+    font-size: 1.5rem;
+}
+
 main p {
     line-height: 1.6;
     text-align: justify;
@@ -135,6 +143,11 @@ main img {
     margin-bottom: 1rem;
     margin: 1.5rem auto;
     border-radius: 0.75rem;
+}
+
+main a:hover {
+    color: var(--siw-blue);
+    text-decoration: none;
 }
   
 /* lists */
