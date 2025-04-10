@@ -1,0 +1,79 @@
+/* CSS for vakken.html */
+article#technische-vakken {
+  display: block flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Flex boxes vakinhouden */
+div.txt-img {
+  display: flex;
+  flex-wrap: wrap;
+}
+div.txt,
+div.img {
+  padding: 1rem;
+  box-sizing: border-box;
+}
+#cont-prog .txt {
+  width: 65%;
+  order: 1;
+}
+#cont-prog .img {
+  width: 35%;
+  order: 2;
+}
+#cont-mcu .txt {
+  width: 50%;
+  order: 2;
+  padding: 1rem;
+}
+#cont-mcu .img {
+  width: 50%;
+  order: 1;
+  padding: 1rem;
+}
+#cont-snb .txt {
+  width: 55%;
+  order: 1;
+}
+#cont-snb .img {
+  width: 45%;
+  order: 2;
+}
+#cont-ele .txt {
+  width: 50%;
+  order: 2;
+}
+#cont-ele .img {
+  width: 50%;
+  order: 1;
+}
+#cont-aut .txt {
+  width: 60%;
+  order: 1;
+}
+#cont-aut .img {
+  width: 40%;
+  order: 2;
+}
+
+@media (max-width: 768px) {
+  .txt-img {
+    flex-direction: column;
+  }
+
+  .txt,
+  .img {
+    width: 100% !important;
+  }
+
+  .img {
+    order: 1 !important;
+  }
+
+  .txt {
+    order: 2 !important;
+  }
+}

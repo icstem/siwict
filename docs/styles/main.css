@@ -65,7 +65,7 @@ nav #logo.scrolled {
 
 #nav-menu li a:hover {
   background-color: var(--siw-yellow);
-  color: var(--siw-blue); 
+  color: var(--siw-blue);
 }
 
 #nav-menu li a.active {
@@ -88,7 +88,7 @@ nav #logo.scrolled {
 
 /* Header */
 header {
-  background-image: url("images/hero.png");
+  background-image: url("../images/hero.png");
   background-size: cover;
   background-position: center;
   height: 200px;
@@ -107,13 +107,18 @@ header h1 {
 /* Main */
 main {
   flex: 1;
-  /* max-width: 90ch; */
   margin: 2rem auto;
   padding: 0 1rem;
 }
 
+main {
+  display: block flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
 main section {
-  margin-bottom: 3rem;
   max-width: 90ch;
 }
 
@@ -137,51 +142,17 @@ main p {
 
 main img {
   width: 100%;
-  max-width: 90ch;
+  max-width: 120ch;
   height: auto;
   display: block;
   margin-bottom: 1rem;
-  margin: 1.5rem auto;
+  margin: auto;
   border-radius: 0.75rem;
 }
 
 main a:hover {
   color: var(--siw-blue);
   text-decoration: none;
-}
-
-/* Grid layout */
-div.txt-img {
-    display: block grid;
-    grid-template-areas: "txt leeg img";
-    grid-template-columns: 6fr 0.2fr 4fr;
-  }
-  div#cont-prog {
-    grid-template-columns: 4fr 0.2fr 6fr;
-}
-  div.txt-img div.img {
-    grid-area: img;
-    align-self: center;
-    justify-self: center;
-  }
-  div.txt-img div.txt {
-    grid-area: txt;
-    align-self: center;
-    justify-self: center;
-  }
-
-div.img-txt {
-  display: block grid;
-  grid-template-areas: "img leeg txt";
-  grid-template-columns: 6fr 0.2fr 4fr;
-}
-div.img-txt div.img {
-  grid-area: img;
-  align-self: center;
-  justify-self: center;
-}
-div.img-txt div.txt {
-  grid-area: txt;
 }
 
 /* lists */
@@ -297,24 +268,6 @@ footer {
     background-image: none;
     height: auto;
   }
-
-  div.txt-img {
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-      "img"
-      "txt";
-  }
-
-  div.img-txt {
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-      "img"
-      "txt";
-  }
-
-  div#cont-prog {
-    grid-template-columns: 1fr;
-}
 
   .nav-container {
     justify-content: space-between;
